@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Dictionary</title>
+	</head>
+	<style>
+		.printing{
+		margin-left: 50px;
+		}
+		.cta-button{
+        background-color: #0c0c0c;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: 0.5s ease-out;
+    }
+    .footer{
+	background-color: #E9E9E9;
+	color: #000000;
+	padding: 12px;
+    text-align: center;
+    }
+    .hh{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
+    }
+	</style>
+    <body>
+
+        <!-- Website Title -->
+<div class="hh">
+		<center><h1>Dictionary</h1>
+			<a><i>A Cool web app built with flask</i></a></center>
+		<hr>
+</div>
+
+		<!-- Result -->
+		<div class="results">
+			<center><h1>Meaning of the word {{word}} is/are: </h1></center>
+			<h2 class = "printing">{{prediction}}</h2><br>
+			<center><img class="gif1" src="{{ url_for('static', filename='knowledge.gif') }}"
+						 height="300px" width="300px" alt="Not Diabetes Image"></center>
+			<center><a class="cta-button" href="/">Search again...</a></center>
+		</div>
+	</body>
+</html>

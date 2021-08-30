@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Dictionary</title>
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+<style>
+    .form-input{
+        background-color: #E9E9E9;
+    width: 370px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0;
+    text-align: center;
+    -webkit-box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+    box-shadow: inset 7px 3px 16px -10px rgba(0,0,0,0.75);
+    margin-bottom: 15px;
+    }
+    .cta-button{
+        background-color: #0c0c0c;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: 0.5s ease-out;
+    }
+    .footer{
+	background-color: #E9E9E9;
+	color: #000000;
+	padding: 8px;
+    text-align: center;
+    }
+    .contact{
+	color: #000000;
+<!--	padding: 7px;-->
+	color: #a6a19a;
+    }
+    .hh{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
+    }
+
+
+</style>
+    <body>
+
+        <!-- Website Title -->
+    	<div class="hh">
+            <center><h2 ><span><b>Dictionary</b></span></h2>
+            <div class='description'>
+    			<p><i>A Crazy Web App, Built with <b>Flask</b>, Deployed using <b>Heroku.</b></i></p></div></center><br>
+
+    	</div>
+
+        <!-- Text Area -->
+        <br>
+    	<div class="ml-container"><center>
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="words" placeholder="Enter the word you want to search..."><br>
+        		<input type="submit" class="cta-button" value="Search"><br><br>
+                <img class="gif1" src="{{ url_for('static', filename='200.gif') }}"
+                     height="300px" width="300px" alt="Not Diabetes Image">
+        	</form></center>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/tushar-max"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/tushar-awasthi-6564a01a7/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Tushar Awasthi.</p>
+       </div>
+
+
+    </body>
+</html>
